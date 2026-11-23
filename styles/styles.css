@@ -1,0 +1,189 @@
+/* Makes header, navigation, main content, and footer display as block elements */
+header, nav, main, footer { display: block; }
+/* Sets the overall page background and default font */
+body { background-color: #252525;
+       font-family: "Calibri", Arial, sans-serif;
+}
+/* Main website container */
+#wrapper { width: 960px;
+           margin: auto;
+		   background-color: #353A40;
+		   color: #330000;
+		   box-shadow: 5px 5px 5px #000000;
+}
+
+/* Main website heading */
+h1 { background-image: url(images/logo.gif);
+     background-repeat: no-repeat;
+     background-color: #353A40;
+	 height: 110px;
+	 /* Heading font and size */
+	 font-family: "Palatino Linotype", "Book Antiqua", serif;
+	 font-size: 3.0em;
+	 color: #C9824A;
+	 /* Positions the heading text */
+     padding-left: 220px;
+	 padding-top: 40px;
+	 /* Adds a shadow behind the heading text */
+	 text-shadow: 3px 3px 3px #90745D;
+	 /* Adjusts the space below the heading */
+	 margin-bottom: -10px;
+}
+
+/* Styles the level 2 and level 3 headers */
+h2, h3 {
+	color: #C9824A;
+	font-family: "Trebuchet MS", Arial, sans-serif;
+}
+
+/* Styles the level 4 heading */
+h4 {
+	font-family: "Trebuchet MS", Arial, sans-serif;
+	 font-size: 2.0em;
+	 color: #C9824A;
+}
+
+/* Styles the level 5 heading */
+h5 {
+	font-family: "Trebuchet MS", Arial, sans-serif;
+	 font-size: 1.2em;
+	 color: #C9824A;
+}
+
+/* Styles the paragraphs on the website */
+p {
+	color: #E4E6E7;
+	font-family: "Arial", sans-serif;
+}
+
+/* Styles the unordered list */
+ul li { color: #E4E6E7;
+	font-family: "Arial", sans-serif;
+}
+
+/* Styles the ordered list */
+ol li { color: #E4E6E7;
+	font-family: "Arial", sans-serif;
+}
+
+/* Styles the description list */
+dl { color: #E4E6E7;
+	font-family: "Arial", sans-serif;
+}
+
+/* Styles each term in the list */
+dt {
+    color: #C9824A;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+
+
+/* Styles the navigation area */
+nav { padding-top: 10px;
+      float: left;
+      width: 200px; 
+}
+
+/* Removes bullets from the navigation list */
+nav ul { list-style-type: none; 
+       padding-left: 20px;
+	 }
+	 
+/* Adds spacing and bold text to navigation items */
+nav li { padding-bottom: 5px;
+       font-weight: bold;
+}
+
+/* Removes the underline from navigation links */
+nav a { text-decoration: none; }
+/* Color of navigation links before they are visited */
+nav a:link { color: #B96F43; }
+/* Color of navigation links after they have been visited */
+nav a:visited{ color: #B96F43; }
+/* Color of navigation links when the mouse is over them */
+nav a:hover { color: #D0A85C; }
+
+/* Styles the main content area */
+main { background-color: #542C35;
+          margin-left: 200px;
+          padding: 1px 20px 20px 20px;   
+		  min-height: 300px;
+}
+
+/* Positions and styles images inside the main content */
+main img { float: right;
+	padding: 0;
+    margin: 0 0 15px 15px;
+	border: 7px solid black;
+}
+
+/* Styles the footer */
+footer { background-color: #542C35;
+       margin-left: 200px;
+       padding: 20px;
+       text-align: center;
+	   font-size: small;
+	   font-style: italic;
+		color: #C9824A;
+}
+
+/* Changes the color of the link in the footer. */
+footer a {
+	color: #D0A85C;
+}
+
+
+/* Responsive design for tablets and mobile phones */
+@media screen and (max-width: 768px) {
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    nav li {
+        margin: 8px 0;
+    }
+
+    main {
+        width: 95%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 23px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    table {
+        display: block;
+        max-width: 100%;
+        overflow-x: auto;
+    }
+
+    input,
+    select,
+    textarea {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}

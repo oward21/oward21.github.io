@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Sets the title that appears in the browser tab -->
+<title>WonderStay Bed & Breakfast - Reservations</title>
+
+<!-- Sets the character encoding for the webpage -->
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Make a reservation at WonderStay Bed and Breakfast by selecting a room, choosing check-in and check-out dates, and requesting additional services.">
+
+<!-- Links this HTML page to the external CSS stylesheet -->
+<link href="styles/reservationsstyles.css" rel="stylesheet">
+</head>
+<body>
+<div id="wrapper">
+
+ <!-- Website header containing the main title -->
+  <header>
+      <h1>WonderStay Bed & Breakfast</h1>
+  </header>
+  
+  <!-- This table displays the room names, nightly prices, and maximum occupancy. -->
+<h2>Room Rates</h2>
+
+<table>
+    <!-- Table headings identify the information in each column. -->
+    <tr>
+        <th>Room Name</th>
+        <th>Price Per Night</th>
+        <th>Maximum Guests</th>
+        <th>Breakfast</th>
+    </tr>
+
+    <!-- Information about the Woodland Room. -->
+    <tr>
+        <td>Woodland Room</td>
+        <td>$110</td>
+        <td>2 Guests</td>
+        <td>Included</td>
+    </tr>
+
+    <!-- Information about the Coastal Room. -->
+    <tr>
+        <td>Coastal Room</td>
+        <td>$110</td>
+        <td>2 Guests</td>
+        <td>Included</td>
+    </tr>
+
+    <!-- Information about the Midnight Room. -->
+    <tr>
+        <td>Midnight Room</td>
+        <td>$115</td>
+        <td>2 Guests</td>
+        <td>Included</td>
+    </tr>
+</table>
+  <!-- Navigation menu for the different pages of the website -->
+  <nav>
+  <ul> 
+	<!-- Link to the home page -->
+    <li><a href="index.html">Home</a></li>
+	<!-- Link to the first room page -->
+	<li><a href="rooms/woodland_room.html">Woodland Room</a></li>
+	<!-- Link to the second room page -->
+	<li><a href="rooms/coastal_room.html">Coastal Room</a></li>
+	<!-- Link to the third room page -->
+	<li><a href="rooms/midnight_room.html">Midnight Room</a></li>
+	<!-- Link to the special events page -->
+	<li><a href="events/special_events.html">Special Events</a></li>
+	<!-- Link to the reservations page -->
+	<li><a href="reservations.html">Reservations</a></li>
+	<!-- Link to the contact page -->
+	<li><a href="contact.html">Contact</a></li>
+  </ul>
+  </nav>
+
+	<!-- The main content area where the reservation form is located. -->
+  <main>
+	<!-- This form collects the guest's information and reservation details. -->
+	<h3>Make a Reservation</h3>
+	<p>Complete the form below to request your stay at Wonderstay Bed & Breakfast.</p>
+	
+	<form id="reservationForm" action="#" method="post">
+		<fieldset>
+			<!-- This section collects the personal information of the guest making the reservation. -->
+			<legend>Guest Information</legend>
+			
+			<!-- This text input allows the guest to enter their full name. -->
+			<div class="form-grid">
+				<div class="form-field">
+					<label for="fullName">Full Name</label>
+					<input type="text" id="fullName" name="fullName" autocomplete="name" required>
+				</div>
+				
+				<!-- This email input collects the guest's email address. -->
+				<div class="form-field">
+					<label for="email">Email Address</label>
+					<input type="email" id="email" name="email" autocomplete="email" required>
+				</div>
+				
+				<!-- This telephone input collects a phone number for contacting the guest. -->
+				<div class="form-field">
+					<label for="phone">Phone Number</label>
+					<input type="tel" id="phone" name="phone" autocomplete="tel" required>
+				</div>
+				
+				<!-- This number input allows the guest to select how many people will be staying. -->
+				<div class="form-field">
+					<label for="guests">Number of Guests</label>
+					<input type="number" id="guests" name="guests" min="1" max="4" value="1" required>
+				</div>
+			</div>
+		</fieldset>
+		
+		<fieldset>
+			<!-- This section collects the check-in date, check-out date, and room selection. -->
+			<legend>Reservation Details</legend>
+			
+			<div class="form-grid">
+				<!-- This date input allows the guest to choose their arrival date. -->
+				<div class="form-field">
+					<label for="checkIn">Check-In Date</label>
+					<input type="date" id="checkIn" name="checkIn" required>
+				</div>
+				
+			<!-- This date input allows the guest to choose their departure date. -->	
+			<div class="form-field">
+				<label for="checkOut">Check-Out Date</label>
+				<input type="date" id="checkOut" name="checkOut" required>
+			</div>
+
+			<!-- This drop-down menu allows guests to choose between the available rooms. -->
+			<div class="form-field full-width">
+				<label for="room">Select a Room</label>
+				<select id="room" name="room" required>
+					<option value="">-- Choose a Room --</option>
+					<option value="woodland">Woodland Room</option>
+					<option value="coastal">Coastal Room</option>
+					<option value="midnight">Midnight Room</option>
+				</select>
+			</div>
+			
+			<!-- This text area allows guests to enter any special requests or additional information. -->
+			<div class="form-field full-width">
+				<label for="requests">Special Requests</label>
+				<textarea id="requests" name="requests" rows="4"
+					placeholder="Let us know if you have any special requests..."></textarea>
+			</div>
+		</div>
+	</fieldset>
+	
+	<fieldset>
+		<!-- This section allows guests to select additional services for their stay. -->
+		<legend>Additional Services</legend>
+		<p class="field-note">Select any extra services you would like during your stay.</p>
+		
+		<!-- These checkboxes allow guests to select multiple additional services. -->
+		<div class="services-grid">
+			<label class="service-option">
+				<input type="checkbox" name="services" value="breakfast">
+				<span>Breakfast - $15 per person, per day</span>
+			</label>
+			
+			<label class="service-option">
+				<input type="checkbox" name="services" value="parking">
+				<span>Parking - $10 per night</span>
+			</label>
+			
+			<label class="service-option">
+				<input type="checkbox" name="services" value="flowers">
+				<span>Flowers - $25</span>
+			</label>
+			
+			<label class="service-option">
+				<input type="checkbox" name="services" value="welcome-basket">
+				<span>Welcome Basket - $30</span>
+			</label>
+		</div>
+	</fieldset>
+	
+	<!-- This button submits the reservation form for processing. -->
+	<p class="required-note">Required fields</p>
+	<button type="submit">Submit Reservation</button>
+	</form>
+  </main>
+  
+  <!-- Footer containing copyright information and contact information -->
+  <footer>
+
+  <!-- Displays the copyright year -->
+  Copyright &copy; 2026<br>
+
+ <!-- Email link for contacting the website owner -->
+ <a href="mailto:oward21@amarillocollege.com">Walter Howard</a>
+
+  </footer>
+</div>
+</body>
+</html>

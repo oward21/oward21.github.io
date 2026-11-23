@@ -1,0 +1,314 @@
+/* Makes the page sections display as block elements */
+header, nav, main, footer { display: block; }
+/* Overall page appearance */
+* { box-sizing: border-box; }
+
+/* Sets the background color and default font for the entire website. */
+body {
+    background-color: #252525;
+    font-family: "Calibri", Arial, sans-serif;
+    margin: 0;
+    padding: 20px 0;
+}
+
+/* Creates the main container that holds all website content. */
+#wrapper {
+    width: 960px;
+    max-width: calc(100% - 32px);
+    margin: auto;
+    background-color: #353A40;
+    color: #E4E6E7;
+    box-shadow: 5px 5px 5px #000000;
+    overflow: hidden;
+}
+
+/* Styles the main website heading, including its color and font size. */
+/* Main website heading */
+h1 {
+    background-image: url(images/logo.gif);
+    background-repeat: no-repeat;
+    background-color: #353A40;
+    min-height: 150px;
+    font-family: "Palatino Linotype", "Book Antiqua", serif;
+    font-size: 3em;
+    color: #C9824A;
+    padding: 40px 20px 20px 220px;
+    text-shadow: 3px 3px 3px #90745D;
+    margin: 0 0 -10px;
+}
+
+/* Sets the colors and fonts for the different heading levels. */
+h2, h3, h4, h5 {
+    color: #C9824A;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+}
+
+h3 { font-size: 1.5em; }
+
+/* Styles the paragraphs and lists on the website */
+p, ul li, ol li, dl {
+    color: #E4E6E7;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+
+/* Styles each term in the list */
+dt {
+    color: #C9824A;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+
+
+/* Styles the navigation area */
+nav { padding-top: 10px;
+      float: left;
+      width: 200px; 
+}
+
+/* Removes bullets from the navigation list */
+nav ul { list-style-type: none; 
+       padding-left: 20px;
+	 }
+	 
+/* Adds spacing and bold text to navigation items */
+nav li { padding-bottom: 5px;
+       font-weight: bold;
+}
+
+/* Removes the underline from navigation links */
+nav a { text-decoration: none; }
+/* Color of navigation links before they are visited */
+nav a:link { color: #B96F43; }
+/* Color of navigation links after they have been visited */
+nav a:visited{ color: #B96F43; }
+/* Color of navigation links when the mouse is over them */
+nav a:hover { color: #D0A85C; }
+
+/* Styles the main content area */
+main {
+    background-color: #542C35;
+    margin-left: 200px;
+    padding: 1px 24px 28px;
+    min-height: 500px;
+}
+
+main > p { margin-top: 0; }
+
+/* Reservation form */
+form {
+    margin-top: 20px;
+}
+
+fieldset {
+    border: 1px solid #9B7778;
+    border-radius: 6px;
+    margin: 0 0 20px;
+    padding: 16px;
+}
+
+legend {
+    color: #C9824A;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-size: 1.15em;
+    font-weight: bold;
+    padding: 0 8px;
+}
+
+/* Creates a two-column layout for the reservation form fields. */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+/* Places each form label above its input field. */
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* Makes certain form fields stretch across both columns. */
+.full-width { grid-column: 1 / -1; }
+
+label {
+    color: #E4E6E7;
+    font-weight: bold;
+}
+
+/* Styles the text boxes, drop-down menus, and text areas. */
+input, select, textarea {
+    width: 100%;
+    border: 1px solid #B7A6A6;
+    border-radius: 4px;
+    background-color: #F4F1EF;
+    color: #252525;
+    font: 1em Arial, sans-serif;
+    padding: 10px;
+}
+
+input:focus, select:focus, textarea:focus, button:focus {
+    outline: 2px solid #D0A85C;
+    outline-offset: 2px;
+}
+
+
+/* Allows visitors to resize the special requests text area vertically. */
+textarea {
+    resize: vertical;
+    min-height: 95px;
+}
+
+.field-note {
+    margin: 0 0 12px;
+    font-size: 0.95em;
+}
+
+/* Arranges the additional services into two columns. */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px 24px;
+}
+
+.service-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.service-option input {
+    width: auto;
+    accent-color: #C9824A;
+}
+
+.required-note {
+    font-size: 0.9em;
+    margin: 0 0 12px;
+}
+
+/* Makes the submit button fill the available width. */
+button[type="submit"] {
+    width: 100%;
+    border: 0;
+    border-radius: 5px;
+    background-color: #315B3B;
+    color: #FFFFFF;
+    font: bold 1.05em Arial, sans-serif;
+    padding: 14px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #42764E;
+}
+
+/* Positions and styles images inside the main content */
+main img { float: right;
+	padding: 0;
+    margin: 0 0 15px 15px;
+	border: 7px solid black;
+}
+
+/* Styles the footer */
+footer { background-color: #542C35;
+       margin-left: 200px;
+       padding: 20px;
+       text-align: center;
+	   font-size: small;
+	   font-style: italic;
+		color: #C9824A;
+}
+
+/* Changes the color of the link in the footer. */
+footer a {
+	color: #D0A85C;
+}
+
+/* Adjusts the website layout for smaller screens like tablets and phones. */
+@media (max-width: 700px) {
+	/* Moves the navigation above the main content on smaller screens. */
+    body { padding: 0; }
+
+    #wrapper {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    h1 {
+        min-height: 110px;
+        font-size: 2em;
+        padding: 28px 16px 16px 150px;
+        background-size: 130px auto;
+    }
+
+    nav {
+        float: none;
+        width: 100%;
+        padding: 10px 16px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 16px;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav li { padding: 0; }
+
+    main, footer {
+        margin-left: 0;
+    }
+
+    main { padding: 16px; }
+}
+
+/* Changes the form to one column on smaller phone screens. */
+@media (max-width: 480px) {
+    .form-grid, .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width { grid-column: auto; }
+
+    h1 {
+        background-image: none;
+        min-height: auto;
+        padding: 24px 16px;
+        font-size: 1.8em;
+    }
+}
+
+/* Styles the room rates table. */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Adds borders and spacing to table headings and cells. */
+th, td {
+    border: 1px solid #C9824A;
+    padding: 12px;
+    text-align: left;
+}
+
+/* Styles the table heading row. */
+th {
+    background-color: #353A40;
+    color: #C9824A;
+}
+
+/* Styles the information inside the table. */
+td {
+    background-color: #542C35;
+    color: #E4E6E7;
+}
